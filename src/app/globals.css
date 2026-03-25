@@ -1,16 +1,13 @@
 @import "tailwindcss";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+@theme {
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-dm-sans);
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
-body {
-  background: #FAF7F2;
+/* body {
+  background: #FAF7F2;;
   color: #1A1714;
-}
+} */
