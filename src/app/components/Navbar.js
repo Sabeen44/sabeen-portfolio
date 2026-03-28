@@ -9,8 +9,7 @@ export default function Navbar() {
       {/* Logo */}
       <Link
         href="/"
-        className="tracking-wide text-xl text-stone-900 hover:text-rose-600 transition-colors font-display"
-        
+        className="font-display tracking-wide text-xl text-stone-900 hover:text-rose-600 transition-colors"
       >
         Portfolio<span className="text-rose-600">.</span>
       </Link>
@@ -19,12 +18,12 @@ export default function Navbar() {
       <ul className="flex gap-8 list-none">
         {['Projects', 'Skills', 'About', 'Resume'].map((item) => (
           <li key={item}>
-            <Link
-              href={`#${item.toLowerCase()}`}
+            
+             <a href={`#${item.toLowerCase()}`}
               className="text-xs tracking-widest uppercase text-stone-500 hover:text-rose-600 transition-colors"
             >
               {item}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
