@@ -9,21 +9,22 @@ export default function Navbar() {
       {/* Logo */}
       <Link
         href="/"
-        className="font-display tracking-wide text-xl text-stone-900 hover:text-rose-600 transition-colors"
+        className="tracking-wide text-xl text-stone-900 hover:text-rose-600 transition-colors"
+        style={{ fontFamily: 'var(--font-playfair)' }}
       >
-        Portfolio<span className="text-rose-600">.</span>
+        Sabeen<span className="text-rose-600">.</span>
       </Link>
 
       {/* Nav links */}
       <ul className="flex gap-8 list-none">
         {['Projects', 'Skills', 'About', 'Resume'].map((item) => (
           <li key={item}>
-            
-             <a href={`#${item.toLowerCase()}`}
+            <Link
+              href={`#${item.toLowerCase()}`}
               className="text-xs tracking-widest uppercase text-stone-500 hover:text-rose-600 transition-colors"
             >
               {item}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 
@@ -14,16 +13,16 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="min-h-screen grid grid-cols-1 md:grid-cols-2 pt-16  ">
+    <section className="min-h-screen grid grid-cols-1 md:grid-cols-2 pt-20 bg-stone-50 items-center">
 
       {/* LEFT — Name & intro */}
-      <div className="flex flex-col self-center px-24 py-48 gap-12 bg-stone-100 h-full">
+      <div className="flex flex-col justify-center px-24 py-16 gap-6 bg-stone-50">
 
         <motion.div
           custom={0} variants={fadeUp} initial="hidden" animate="show"
           className="flex items-center gap-3"
         >
-          <div className="w-12 h-px bg-rose-200" />
+          <div className="w-8 h-px bg-rose-200" />
           <span className="text-xs tracking-widest uppercase text-rose-600 font-body">
             Available for work
           </span>
@@ -82,66 +81,40 @@ export default function Hero() {
 
       </div>
 
-     {/* RIGHT — Photo panel */}
-<motion.div
-  custom={2} variants={fadeUp} initial="hidden" animate="show"
-  className="relative flex 
-  items-center justify-center overflow-hidden bg-stone-200 min-h-screen pb-0"
->
+      {/* RIGHT — Photo panel */}
+      <motion.div
+        custom={2} variants={fadeUp} initial="hidden" animate="show"
+        className="relative flex items-center justify-center overflow-hidden bg-stone-100 min-h-screen"
+      >
 
- 
+        {/* Decorative circle */}
+        <div className="absolute top-8 right-8 w-20 h-20 rounded-full border-2 border-rose-300 opacity-50" />
 
-  {/* Small dot */}
-  <div className="absolute top-10 left-10 w-12 h-12 rounded-full bg-rose-500 opacity-40" />
+        {/* Small dot */}
+        <div className="absolute bottom-40 left-8 w-10 h-10 rounded-full bg-rose-600 opacity-15" />
 
-  {/* Stat card — top left */}
-  {/* <div className="absolute top-24 left-6 bg-white px-5 py-3 shadow-sm border border-stone-100">
-    <div className="font-body text-xs tracking-widest uppercase text-stone-400 mb-1">Status</div>
-    <div className="font-display text-lg text-stone-900">Available</div>
-  </div> */}
+        {/* Photo placeholder — replace with your actual photo */}
+        <div
+          className="flex items-center justify-center bg-rose-100 w-3/4 max-w-sm h-96"
+          style={{ borderRadius: '50% 50% 0 0 / 60% 60% 0 0' }}
+        >
+          <span className="font-body text-xs text-rose-600">
+            Your Photo Here
+          </span>
+        </div>
 
- 
+        {/* Stat card */}
+        <div className="absolute bottom-10 right-10 bg-white px-6 py-4 shadow-md">
+          <div className="font-body text-xs tracking-widest uppercase text-stone-500 mb-1">
+            Stack
+          </div>
+          <div className="font-display text-2xl font-bold text-stone-900">
+            Full Stack
+          </div>
+        </div>
 
-  {/* Photo — sits at bottom */}
- <div className="w-100 h-100 overflow-hidden rounded-full border z-10">
-  {/* w-72 h-72 overflow-hidden rounded-full border-4 border-white shadow-md mb-16 relative  */}
-    <Image
-      src="/profile-pic.jpeg"
-      alt="Sabeen"
-      width={350}
-      height={350}
-      className="w-full h-full object-cover object-top"
-      priority
-    />
-  </div>
+      </motion.div>
 
-   {/* Decorative circle */}
-  <div className="absolute top-40 right-60 w-90 h-90 rounded-full border-6 border-rose-300 opacity-70 " />
-
-   {/* Stat card — top right */}
-  <div className="bg-rose-400 px-5 py-3 shadow-sm border-4 border-rose-300 absolute bottom-48 right-12">
-
-    
-
-    <div className="font-body text-xs tracking-widest uppercase text-stone-700 mb-1">Stack</div>
-    <div className="font-display text-lg text-stone-600">Full Stack</div>
-  </div>
-
-  {/* Stat card — bottom left */}
-  {/* <div className="absolute bottom-6 left-6 bg-rose-400 px-5 py-3 shadow-sm border border-stone-100">
-
-    <div className="font-body text-xs tracking-widest uppercase text-stone-700 mb-1">Based In</div>
-    <div className="font-display text-lg text-stone-700">Seattle</div>
-  </div> */}
-
-  {/* Stat card — bottom right */}
-  <div className=" bg-rose-400 px-5 py-3 shadow-sm border-4 border-rose-300 absolute bottom-72 right-12">
-
-    <div className="font-body text-xs tracking-widest uppercase text-stone-700 mb-1">Focus</div>
-    <div className="font-display text-lg text-stone-600">Frontend</div>
-  </div>
-
-</motion.div>
     </section>
   );
 }

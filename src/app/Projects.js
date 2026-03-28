@@ -68,7 +68,7 @@ function ProjectCard({ project, index }) {
       <div className="h-px bg-stone-100 group-hover:bg-rose-100 transition-colors" />
 
       {/* Title */}
-      <h3 className="font-display text-2xl text-rose-400 group-hover:text-rose-600 transition-colors">
+      <h3 className="font-display text-2xl text-stone-900 group-hover:text-rose-600 transition-colors">
         {project.title}
       </h3>
 

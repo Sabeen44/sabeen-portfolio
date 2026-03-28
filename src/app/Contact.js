@@ -4,7 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const links = [
-  { label: 'Email', value: 'craftedstack@gmail.com', href: 'crafterstack@gmail.com' },
+  { label: 'Email', value: 'sh.sabeen@gmail.com', href: 'mailto:sh.sabeen@gmail.com' },
   { label: 'GitHub', value: 'Sabeen44', href: 'https://github.com/Sabeen44' },
   { label: 'LinkedIn', value: 'Sabeen', href: '#' },
 ];
