@@ -7,22 +7,22 @@ const skills = [
   {
     number: '01',
     category: 'Front-End',
-    color: 'text-rose-600',
-    border: 'border-rose-200',
+    // color: 'text-rose-600',
+    // border: 'border-rose-200',
     items: ['HTML', 'CSS', 'JavaScript', 'React', 'Angular', 'Tailwind CSS'],
   },
   {
     number: '02',
     category: 'Back-End',
-    color: 'text-stone-900',
-    border: 'border-stone-200',
+    // color: 'text-stone-900',
+    // border: 'border-stone-200',
     items: ['Node.js', 'Express', 'REST APIs', 'MongoDB', 'MySQL'],
   },
   {
     number: '03',
     category: 'Tools',
-    color: 'text-stone-500',
-    border: 'border-stone-200',
+    // color: 'text-stone-500',
+    // border: 'border-stone-200',
     items: ['Git', 'GitHub', 'VS Code', 'Postman', 'Figma'],
   },
 ];
@@ -37,7 +37,7 @@ function SkillCard({ skill, index }) {
       initial={{ opacity: 0, y: 32 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.15, duration: 0.6, ease: 'easeOut' }}
-      className={`border ${skill.border} p-8 flex flex-col gap-6 bg-white hover:border-rose-300 transition-colors`}
+      className={`border ${skill.border} p-8 flex flex-col gap-6 bg-white hover:border-rose-300 transition-colors border-rose-300 text-rose-400`}
     >
 
       {/* Card header */}

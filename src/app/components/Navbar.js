@@ -12,7 +12,7 @@ export default function Navbar() {
         className="tracking-wide text-xl text-stone-900 hover:text-rose-600 transition-colors"
         style={{ fontFamily: 'var(--font-playfair)' }}
       >
-        Sabeen<span className="text-rose-600">.</span>
+        Portfolio<span className="text-rose-600">.</span>
       </Link>
 
       {/* Nav links */}
